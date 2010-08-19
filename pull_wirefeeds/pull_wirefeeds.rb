@@ -84,7 +84,7 @@ class Listener
         x = multibyte.normalize(:kc).to_s #convert multibyte chars to ASCII
         y = []
         x.split("/").each do |f|  #add space between whole number and fraction
-            if f.length > 1
+            if f.length > 1 and f[-1].chr =~ /[0-9]/
                 y << "#{f[0..-2]} #{f[-1].chr}"
             else
                 y << f
