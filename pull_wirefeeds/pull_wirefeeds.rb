@@ -16,6 +16,8 @@ FIVE_MINUTES = 5.minutes.to_i
 ONE_HOUR = 1.hour.to_i
 WIRE_LOC = "/home/apwire/Desktop/AP_WIRE"
 LAST_RUN = "/var/local/apwire/last_wirefeed_run"
+ID_LIST = "600588"
+MAX_ITEMS = 500
 
 USER = "editor@mariondaily.com"
 PASS = "rileysam"
@@ -51,7 +53,7 @@ AP_CATEGORIES = {
 
 def ap_url(time_interval)
     return "http://syndication.ap.org/AP.Distro.Feed/GetFeed.aspx?" +
-    "idList=600588&idListType=savedsearches&maxItems=500&minDateTime=" +
+    "idList=#{ID_LIST}&idListType=savedsearches&maxItems=#{MAX_ITEMS}&minDateTime=" +
     time_interval.utc.strftime("%Y-%m-%dT%H:%M:%SZ") +
     "&maxDateTime=&fullContent=hnews"
 end
