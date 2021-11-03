@@ -19,8 +19,8 @@ LAST_RUN = "/var/local/apwire/last_wirefeed_run"
 ID_LIST = "600588"
 MAX_ITEMS = 500
 
-USER = "editor@mariondaily.com"
-PASS = "rileysam"
+USER = "editor@newspaper.com"
+PASS = "reallysecurepassword"
 
 AP_CATEGORIES = {
     "a" => "GENERAL NEWS",
